@@ -26,4 +26,13 @@ public class Bus {
         this.passengers.remove(0);
     }
 
+    public void pickUp(BusStop busStop){
+        while (busStop.getNumberOfPeopleInQueue() != 0){
+            Person person = busStop.removePersonFromQueue();
+            addPassenger(person);
+        }
+
+
+    }
+
 }
